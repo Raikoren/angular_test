@@ -8,9 +8,13 @@ const data = require('../../dataset-example.json');
 })
 export class AppComponent implements OnInit {
 	title = 'testaptitude';
-	filter: string;
+	search: string;
 	json:any = data;
 
-  ngOnInit() {
-  }
+	isInSearch() {
+		this.json = data.filter(product => product.product_name.includes(this.search));
+	}
+
+	ngOnInit() {
+	}
 }
