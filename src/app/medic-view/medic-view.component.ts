@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-medic-view',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MedicViewComponent implements OnInit {
 
-  constructor() { }
+	@Input() product_name: string
+	@Input() unit_cost: string
 
-  ngOnInit(): void {
-  }
+	constructor() { }
+
+	ngOnInit(): void {
+	}
 
 }

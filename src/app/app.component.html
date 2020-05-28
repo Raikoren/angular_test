@@ -6,9 +6,9 @@
 <div class="center">
 	<input type="text" placeholder="search" name="search" [(ngModel)]="search" (ngModelChange)="isInSearch()" class="input-search form-control">
 	<ul>
-		<app-medic-shop *ngFor="let i of json"
+		<app-medic-view *ngFor="let i of json"
 			[product_name]="i.product_name"
 			[unit_cost]="i.unit_cost">
-		</app-medic-shop>
+		</app-medic-view>
 	</ul>
 </div>
